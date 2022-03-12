@@ -1,5 +1,5 @@
-{% set version = "0.17.0" %}
-{% set sha256 = "3f6606ff2152a760566c60117e3587ced4e16da37ecc111938177c9bdf32ee32" %}
+{% set version = "0.20.0" %}
+{% set sha256 = "c73ad090f43626c12b06008f5798f52fa422d315971bc4b65db885748ec2abdf" %}
 
 package:
   name: rust-script
@@ -10,7 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script:
     - cargo install --no-track --locked --verbose --root "${PREFIX}" --path .    # [not win]
     - cargo install --no-track --locked --verbose --root "%PREFIX%" --path .     # [win]
