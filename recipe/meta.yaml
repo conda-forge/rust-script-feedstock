@@ -1,5 +1,5 @@
-{% set version = "0.22.0" %}
-{% set sha256 = "c4adcac602b38abb0885c5f76013dba942c3aabdecc8250dfc340f58b70bd7f7" %}
+{% set version = "0.24.0" %}
+{% set sha256 = "35eb42a0dc42216875c476b78f7de1e84cc9a4ad7dbe54f6057b24036cc8bbc0" %}
 
 package:
   name: rust-script
