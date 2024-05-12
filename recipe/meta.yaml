@@ -1,5 +1,5 @@
-{% set version = "0.22.0" %}
-{% set sha256 = "c4adcac602b38abb0885c5f76013dba942c3aabdecc8250dfc340f58b70bd7f7" %}
+{% set version = "0.26.0" %}
+{% set sha256 = "8c1ec683daa953f9973e840c0292d26177496f71a4542ab3ade7f39c5ce85ea7" %}
 
 package:
   name: rust-script
@@ -20,6 +20,9 @@ requirements:
     - {{ compiler('rust') }}
     # rust-script links to C runtime libs => use compiler('c') to get them into run deps
     - {{ compiler('c') }}
+    # this seems to be needed for having the `renameat()` function available for `rustix`
+    # on older osx / macOS systems
+    - macports-legacy-support  # [osx]
   host:
   run:
     - rust >=1.47
