@@ -19,8 +19,8 @@ build:
 requirements:
   build:
     - {{ compiler('rust') }}
-    # rust-script links to C runtime libs => use compiler('c') to get them into run deps
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - cargo-bundle-licenses
   host:
   run:
