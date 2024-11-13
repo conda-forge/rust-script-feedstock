@@ -30,7 +30,7 @@ test:
   commands:
     - rust-script --version | grep -qF '{{ version }}'    # [not win]
     - rust-script --version | findstr "/C:{{ version }}"  # [win]
-    - rust-script --expr 'println!("Hello, World!");' | grep -qF 'Hello, World!'           # [not win]
+    - rust-script --expr 'println!("Hello, World!");' | grep -qF 'Hello, World!'         # [not win]
     - rust-script --expr "println!(\"Hello, World!\");" | findstr /B "/C:Hello, World!"  # [win]
 
 about:
@@ -49,7 +49,6 @@ about:
     - Using expressions as stream filters (i.e. for use in command pipelines).
     - Running unit tests and benchmarks from scripts.
     - Custom templates for command-line expressions and filters.
-
   doc_url: https://rust-script.org/
   dev_url: https://github.com/fornwall/rust-script
 
